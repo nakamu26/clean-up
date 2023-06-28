@@ -1,0 +1,2 @@
+class NormalReportsController < ApplicationController
+end
