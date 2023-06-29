@@ -15,6 +15,19 @@ ul li {
   background: #f8f8f8;
 }
 
+.form-area {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form {
+  padding: 5px;
+  border: solid 1px;
+  border-radius: 10px;
+  color: black;
+  font-weight: bold;
+}
+
 .report-contents {
   align-items: center;
   padding: 10px;
@@ -23,7 +36,7 @@ ul li {
 .reports-area {
   padding: 5px;
   margin-bottom: 5px;
-  background-color: #00FF00;
+  background-color: #00ff0d;
 }
 
 .title {

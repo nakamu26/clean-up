@@ -1,12 +1,12 @@
 .top-page-header {
   width: 100vw;
   height: 20vh;
+  padding: 5px;
   background: #f8f8f8;
 }
 
 .page-title {
   height: 70%;
-  padding: 10px 0;
   color: #0000FF;
   font-size: 50px;
 }
