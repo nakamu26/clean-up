@@ -1,0 +1,50 @@
+<%= render "shared/header" %>
+
+<div class='main'>
+  <div class='report-contents'>
+    <div class='reports-area'>
+      <div class='title'>報告</div>
+      <ul>
+        <li class='list'>
+          <%= link_to "#" do %>
+            <div class='report-info'>地域:猫実</div>
+            <div class='report-info'>回転数:3回転目</div>
+            <div class='report-info'>終了地点:自転車屋の通りまで収集済み</div>
+            <div class='report-info'>報告者:田中</div>
+            <div class='report-info-attention'>写真あり</div>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class='reports-area'>
+      <div class='title'>特記事項</div>
+      <ul>
+        <li class='list'>
+          <%= link_to "#" do %>
+            <div class='report-info'>地域:猫実</div>
+            <div class='report-info'>収集不可</div>
+            <div class='report-info'>自転車屋の通り</div>
+            <div class='report-info'>田中</div>
+            <div class='report-info-attention'>写真あり</div>
+            <div class='report-info-attention'>コメントあり</div>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class='reports-area'>
+      <div class='title'>不法物</div>
+      <ul>
+        <li class='list'>
+          <%= link_to "#" do %>
+            <div class='report-info'>猫実</div>
+            <div class='report-info'>自転車屋の通り</div>
+            <div class='report-info'>ソファ</div>
+            <div class='report-info'>田中</div>
+            <div class='report-info-attention'>写真あり</div>
+            <div class='report-info-attention'>コメントあり</div>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
