@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+
+.main {
+  background: #f8f8f8;
+}
+
+.report-contents {
+  align-items: center;
+  padding: 10px;
+}
+
+.reports-area {
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #00FF00;
+}
+
+.title {
+  line-height: 1.5;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.list {
+  padding: 5px 1px;
+  border: solid 1px;
+  background-color: #f8f8f8;
+}
+
+.report-info {
+  color: black;
+  font-weight: bold;
+}
+
+.report-info-attention {
+  color: red;
+}
+
