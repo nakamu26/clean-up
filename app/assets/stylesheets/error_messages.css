@@ -1,0 +1,10 @@
+.error-alert {
+  margin-bottom: 5vh;
+  margin-left: 30px;
+}
+
+.error-message {
+  font-size: 17px;
+  list-style: circle;
+  color: rgb(182, 48, 0);
+}
