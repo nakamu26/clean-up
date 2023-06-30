@@ -18,12 +18,17 @@ ul li {
 .form-area {
   display: flex;
   justify-content: space-around;
+  padding: 0 5%;
 }
 
 .form {
+  height: 30px;
+  width: 120px;
   padding: 5px;
   border: solid 1px;
   border-radius: 10px;
+  line-height: 20px;
+  text-align: center;
   color: black;
   font-weight: bold;
 }
@@ -31,6 +36,8 @@ ul li {
 .report-contents {
   align-items: center;
   padding: 10px;
+  margin: 0 10%;
+  width: 80vw;
 }
 
 .reports-area {
