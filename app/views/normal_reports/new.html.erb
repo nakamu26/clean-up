@@ -13,12 +13,12 @@
 
   <div class="field">
     <div class='form-text'>回転数</div>
-    <%= f.collection_select(:location_id, NumberOfTimes.all, :id, :name, {}, {class:"select-box"}) %>
+    <%= f.collection_select(:number_of_times_id, NumberOfTimes.all, :id, :name, {}, {class:"select-box"}) %>
   </div>
 
   <div class="field">
     <div class='form-text'>終了地点</div>
-    <%= f.text_field :name, class:"input-default", autofocus: true %>
+    <%= f.text_field :point, class:"input-default", autofocus: true %>
   </div>
 
   <div class="img-upload">
