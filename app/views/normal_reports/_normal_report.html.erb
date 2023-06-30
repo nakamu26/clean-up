@@ -1,0 +1,11 @@
+<li class='list'>
+  <%= link_to "#" do %>
+    <div class='report-info'>地域:<%= normal_report.location.name %></div>
+    <div class='report-info'>回転数:<%= normal_report.number_of_times.name %>回転目</div>
+    <div class='report-info'>終了地点:<%= normal_report.point %></div>
+    <div class='report-info'>報告者:<%= normal_report.user.name %></div>
+    <% if normal_report.image.present? %>
+      <div class='report-info-attention'>写真あり</div>
+    <% end %>
+  <% end %>
+</li>

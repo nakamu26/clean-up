@@ -55,6 +55,7 @@ ul li {
 
 .list {
   padding: 5px 1px;
+  margin-bottom: 5px;
   border: solid 1px;
   background-color: #f8f8f8;
 }

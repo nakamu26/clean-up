@@ -11,15 +11,13 @@
     <div class='reports-area'>
       <div class='title'>報告</div>
       <ul>
+         <% if @normal_reports.length != 0 %>
+          <%= render partial: "normal_report", collection: @normal_reports %>
+        <% else %>
         <li class='list'>
-          <%= link_to "#" do %>
-            <div class='report-info'>地域:猫実</div>
-            <div class='report-info'>回転数:3回転目</div>
-            <div class='report-info'>終了地点:自転車屋の通りまで収集済み</div>
-            <div class='report-info'>報告者:田中</div>
-            <div class='report-info-attention'>写真あり</div>
-          <% end %>
+            <div class='report-info'>報告はまだありません</div>
         </li>
+        <% end %>
       </ul>
     </div>
     <div class='reports-area'>
