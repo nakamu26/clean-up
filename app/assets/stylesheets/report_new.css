@@ -1,0 +1,15 @@
+.form-main{
+  height: 80vh;
+  padding: 5px;
+  background: #f8f8f8;
+}
+
+.form-title {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.post-btn-contents {
+  margin-top: 15px;
+}

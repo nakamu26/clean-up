@@ -4,5 +4,6 @@ class NormalReportsController < ApplicationController
   end
 
   def new
+    @normal_report = NormalReport.new
   end
 end

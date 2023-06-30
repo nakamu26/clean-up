@@ -10,6 +10,10 @@
   font-weight: bold;
 }
 
+.field {
+  margin: 5px;
+}
+
 .form-text {
   font-size: 15px;
   font-weight: bold;
@@ -25,4 +29,8 @@
   background: #fff;
   font-size: 16px;
   resize: none;
+}
+
+.actions {
+  margin: 5px;
 }

@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+
+<div class='form-main'>
+  <h2 class='form-title'>報告フォーム</h2>
+  <%= form_with model: @normal_report, local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="field">
+    <div class='form-text'>収集地域</div>
+    <%= f.collection_select(:location_id, Location.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
+    <div class='form-text'>回転数</div>
+    <%= f.collection_select(:location_id, NumberOfTimes.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
+    <div class='form-text'>終了地点</div>
+    <%= f.text_field :name, class:"input-default", autofocus: true %>
+  </div>
+
+  <div class="img-upload">
+    <div class="form-text">
+      補足写真
+    </div>
+    <div class="click-upload">
+      <p>
+        クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :image, id:"item-image" %>
+    </div>
+  </div>
+
+  <div class="post-btn-contents">
+    <% unless params[:id] %>
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+    <% else %>
+      <%= f.submit "変更する" ,class:"post-btn" %>
+    <% end %>
+  </div>
+
+  <% end %>
+</div>
