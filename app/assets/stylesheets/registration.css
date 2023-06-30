@@ -1,5 +1,6 @@
 .devise-main{
   height: 80vh;
+  padding: 5px;
   background: #f8f8f8;
 }
 
@@ -7,6 +8,10 @@
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.field {
+  margin: 5px;
 }
 
 .form-text {
@@ -24,4 +29,8 @@
   background: #fff;
   font-size: 16px;
   resize: none;
+}
+
+.actions {
+  margin: 5px;
 }
