@@ -3,7 +3,7 @@ class NormalReportsController < ApplicationController
 
 
   def index
-    @normal_reports = NormalReport.includes(:user).order("created_at DESC")
+    @normal_reports = NormalReport.where("created_at >= ?", Date.today).includes(:user).order("created_at DESC")
   end
 
   def new
