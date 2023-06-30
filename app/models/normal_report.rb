@@ -1,0 +1,2 @@
+class NormalReport < ApplicationRecord
+end
