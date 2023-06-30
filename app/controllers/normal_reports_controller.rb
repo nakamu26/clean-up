@@ -12,7 +12,7 @@ class NormalReportsController < ApplicationController
   def create
     @normal_report = NormalReport.new(normal_report_params)
     if @normal_report.save
-      redirect_to root_path
+      render :create
     else
       render :new
     end

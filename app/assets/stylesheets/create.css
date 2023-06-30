@@ -1,0 +1,19 @@
+.complete-main {
+  height: 80vh;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  background: #f8f8f8;
+}
+
+.complete-content {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+
+.complete-message {
+  margin: 20px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
