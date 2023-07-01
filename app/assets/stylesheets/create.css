@@ -1,9 +1,8 @@
 .complete-main {
-  height: 80vh;
+  height: 100%;
   padding: 5px;
   display: flex;
   justify-content: center;
-  background: #f8f8f8;
 }
 
 .complete-content {
