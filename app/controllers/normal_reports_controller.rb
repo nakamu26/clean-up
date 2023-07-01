@@ -19,6 +19,10 @@ class NormalReportsController < ApplicationController
     end
   end
 
+  def show
+    @normal_report = NormalReport.find(params[:id])
+  end
+
   private
 
   def normal_report_params

@@ -63,6 +63,7 @@ ul li {
 .report-info {
   color: black;
   font-weight: bold;
+  overflow-wrap: break-word;
 }
 
 .report-info-attention {

@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+
+<div class='report-show'>
+  <% if user_signed_in? && current_user.id == @normal_report.user_id %>
+    <div class='edit-btn'>
+      <%= link_to '編集する', '#', class: "form" %>
+    </div>
+  <% end %>
+  <div class='report-show-contents'>
+    <div class='report-image'>
+      <% if @normal_report.image.present? %>
+        <%= image_tag @normal_report.image ,class:"report-box-img" %>
+      <% else %>
+        <div class='report-message'>写真はありません</div>
+      <% end %>
+    </div>
+    <div class='report-text'>
+      <div class='report-info'>地域:<%= @normal_report.location.name %></div>
+      <div class='report-info'>回転数:<%= @normal_report.number_of_times.name %>回転目</div>
+      <div class='report-info'>終了地点:<%= @normal_report.point %></div>
+      <div class='report-info'>報告者:<%= @normal_report.user.name %></div>
+    </div>
+  </div>
+
+</div>

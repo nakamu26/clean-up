@@ -1,5 +1,5 @@
 <li class='list'>
-  <%= link_to "#" do %>
+  <%= link_to normal_report_path(normal_report.id) do %>
     <div class='report-info'>地域:<%= normal_report.location.name %></div>
     <div class='report-info'>回転数:<%= normal_report.number_of_times.name %>回転目</div>
     <div class='report-info'>終了地点:<%= normal_report.point %></div>
