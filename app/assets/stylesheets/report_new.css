@@ -1,7 +1,6 @@
 .form-main{
   height: 80vh;
   padding: 5px;
-  background: #f8f8f8;
 }
 
 .form-title {
@@ -12,4 +11,10 @@
 
 .post-btn-contents {
   margin-top: 15px;
+}
+
+.back-btn {
+  margin-left: 5px;
+  text-decoration: underline;
+  color: black;
 }

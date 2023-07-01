@@ -10,11 +10,6 @@ ul li {
   list-style: none;
 }
 
-
-.main {
-  background: #f8f8f8;
-}
-
 .form-area {
   display: flex;
   justify-content: space-around;
