@@ -36,8 +36,10 @@
   <div class="post-btn-contents">
     <% unless params[:id] %>
       <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
     <% else %>
       <%= f.submit "変更する" ,class:"post-btn" %>
+      <%=link_to 'もどる', normal_report_path(@normal_report.id), class:"back-btn" %>
     <% end %>
   </div>
 

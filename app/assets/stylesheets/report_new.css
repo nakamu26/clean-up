@@ -13,3 +13,9 @@
 .post-btn-contents {
   margin-top: 15px;
 }
+
+.back-btn {
+  margin-left: 5px;
+  text-decoration: underline;
+  color: black;
+}
