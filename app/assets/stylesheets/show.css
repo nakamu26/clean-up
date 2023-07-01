@@ -1,0 +1,33 @@
+.report-show {
+  height: 80vh;
+  padding: 5px;
+  background: #f8f8f8;
+}
+
+.edit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.report-image {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.report-box-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.report-text {
+  width: 500px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+}
