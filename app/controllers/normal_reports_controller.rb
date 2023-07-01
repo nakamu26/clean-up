@@ -1,6 +1,7 @@
 class NormalReportsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_normal_report, only: [:show, :edit, :update]
+  before_action :move_to_index, except: [:index, :show, :new, :create]
 
   def index
     @normal_reports = NormalReport.where("created_at >= ?", Date.today).includes(:user).order("created_at DESC")
@@ -43,5 +44,9 @@ class NormalReportsController < ApplicationController
 
   def set_normal_report
     @normal_report = NormalReport.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to root_path unless current_user.id == @normal_report.user_id
   end
 end
