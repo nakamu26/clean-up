@@ -1,4 +1,6 @@
 class SpecialReportsController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+
   def new
     @special_report = SpecialReport.new
   end
