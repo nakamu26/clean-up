@@ -1,0 +1,2 @@
+class SpecialReport < ApplicationRecord
+end
