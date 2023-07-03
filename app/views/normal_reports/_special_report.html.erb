@@ -1,0 +1,14 @@
+<li class='list'>
+  <%= link_to '#' do %>
+    <div class='report-info'>地域:<%= special_report.location.name %></div>
+    <div class='report-info'>種別:<%= special_report.category.name %></div>
+    <div class='report-info'>地点:<%= special_report.point %></div>
+    <div class='report-info'>報告者:<%= special_report.user.name %></div>
+    <% if special_report.image.present? %>
+      <div class='report-info-attention'>写真あり</div>
+    <% end %>
+    <% if special_report.comment.present? %>
+      <div class='report-info-attention'>補足事項あり</div>
+    <% end %>
+  <% end %>
+</li>
