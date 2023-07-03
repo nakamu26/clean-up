@@ -3,7 +3,7 @@
 <div class='report-show'>
   <% if user_signed_in? && current_user.id == @special_report.user_id %>
     <div class='edit-btn'>
-      <%= link_to '編集する', '#', method: :get, class: "form" %>
+      <%= link_to '編集する', edit_special_report_path(@special_report.id), method: :get, class: "form" %>
     </div>
   <% end %>
   <div class='report-show-contents'>
