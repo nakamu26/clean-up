@@ -1,8 +1,8 @@
 <%= render "shared/header" %>
 
 <div class='form-main'>
-  <h2 class='form-title'>報告フォーム</h2>
-  <%= form_with model: @normal_report, local: true do |f| %>
+  <h2 class='form-title'>特記事項フォーム</h2>
+  <%= form_with model: @special_report, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -12,13 +12,18 @@
   </div>
 
   <div class="field">
-    <div class='form-text'>回転数</div>
-    <%= f.collection_select(:number_of_times_id, NumberOfTimes.all, :id, :name, {}, {class:"select-box"}) %>
+    <div class='form-text'>種別</div>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
   </div>
 
   <div class="field">
-    <div class='form-text'>終了地点</div>
+    <div class='form-text'>地点</div>
     <%= f.text_field :point, class:"input-default" %>
+  </div>
+
+  <div class="field">
+    <div class='form-text'>補足事項</div>
+    <%= f.text_field :comment, class:"input-default" %>
   </div>
 
   <div class="img-upload">
@@ -39,7 +44,7 @@
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     <% else %>
       <%= f.submit "変更する" ,class:"post-btn" %>
-      <%=link_to 'もどる', normal_report_path(@normal_report.id), class:"back-btn" %>
+      <%=link_to 'もどる', normal_report_path(@special_report.id), class:"back-btn" %>
     <% end %>
   </div>
 
