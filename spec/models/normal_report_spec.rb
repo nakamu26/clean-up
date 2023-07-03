@@ -21,7 +21,7 @@ RSpec.describe NormalReport, type: :model do
         @normal_report.valid?
         expect(@normal_report.errors.full_messages).to include("Location can't be blank")
       end
-      it 'location_idが0では登録できない' do
+      it 'number_of_times_idが0では登録できない' do
         @normal_report.number_of_times_id = 0
         @normal_report.valid?
         expect(@normal_report.errors.full_messages).to include("Number of times can't be blank")
