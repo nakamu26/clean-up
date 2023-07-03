@@ -1,1 +1,52 @@
-hello
+<%= render "shared/header" %>
+
+<div class='form-main'>
+  <h2 class='form-title'>特記事項フォーム</h2>
+  <%= form_with model: @special_report, local: true do |f| %>
+
+  <%= render 'shared/error_messages', model: f.object %>
+
+  <div class="field">
+    <div class='form-text'>収集地域</div>
+    <%= f.collection_select(:location_id, Location.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
+    <div class='form-text'>種別</div>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+  </div>
+
+  <div class="field">
+    <div class='form-text'>地点</div>
+    <%= f.text_field :point, class:"input-default" %>
+  </div>
+
+  <div class="field">
+    <div class='form-text'>補足事項</div>
+    <%= f.text_field :comment, class:"input-default" %>
+  </div>
+
+  <div class="img-upload">
+    <div class="form-text">
+      補足写真
+    </div>
+    <div class="click-upload">
+      <p>
+        クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :image, id:"item-image" %>
+    </div>
+  </div>
+
+  <div class="post-btn-contents">
+    <% unless params[:id] %>
+      <%= f.submit "投稿する" ,class:"post-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    <% else %>
+      <%= f.submit "変更する" ,class:"post-btn" %>
+      <%=link_to 'もどる', normal_report_path(@special_report.id), class:"back-btn" %>
+    <% end %>
+  </div>
+
+  <% end %>
+</div>
