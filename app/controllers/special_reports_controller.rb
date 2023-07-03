@@ -17,6 +17,6 @@ class SpecialReportsController < ApplicationController
   private
 
   def special_report_params
-    params.require(:special_report).permit(:location_id, :category, :point, :comment, :image).merge(user_id: current_user.id)
+    params.require(:special_report).permit(:location_id, :category_id, :point, :comment, :image).merge(user_id: current_user.id)
   end
 end
