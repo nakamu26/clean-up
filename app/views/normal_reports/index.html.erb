@@ -23,16 +23,13 @@
     <div class='reports-area'>
       <div class='title'>特記事項</div>
       <ul>
+        <% if @special_reports.length != 0 %>
+          <%= render partial: "special_report", collection: @special_reports %>
+        <% else %>
         <li class='list'>
-          <%= link_to "#" do %>
-            <div class='report-info'>地域:猫実</div>
-            <div class='report-info'>収集不可</div>
-            <div class='report-info'>自転車屋の通り</div>
-            <div class='report-info'>田中</div>
-            <div class='report-info-attention'>写真あり</div>
-            <div class='report-info-attention'>コメントあり</div>
-          <% end %>
+            <div class='report-info'>特記事項はまだありません</div>
         </li>
+        <% end %>
       </ul>
     </div>
     <div class='reports-area'>
