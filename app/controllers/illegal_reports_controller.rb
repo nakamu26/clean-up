@@ -1,6 +1,7 @@
 class IllegalReportsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
   before_action :set_illegal_report, only: [:show, :edit, :update]
+  before_action :move_to_index, except: [:show, :new, :create]
 
   def new
     @illegal_report = IllegalReport.new
@@ -39,5 +40,9 @@ class IllegalReportsController < ApplicationController
 
   def set_illegal_report
     @illegal_report = IllegalReport.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to root_path unless current_user.id == @illegal_report.user_id
   end
 end
