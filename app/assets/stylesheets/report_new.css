@@ -9,8 +9,13 @@
   font-weight: bold;
 }
 
+.img-upload {
+  margin-left: 5px;
+}
+
 .post-btn-contents {
   margin-top: 15px;
+  margin-left: 5px;
 }
 
 .back-btn {
