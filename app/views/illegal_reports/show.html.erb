@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+
+<div class='report-show'>
+  <% if user_signed_in? && current_user.id == @illegal_report.user_id %>
+    <div class='edit-btn'>
+      <%= link_to '編集する', '#', method: :get, class: "form" %>
+    </div>
+  <% end %>
+  <div class='report-show-contents'>
+    <div class='report-image'>
+      <% if @illegal_report.image.present? %>
+        <%= image_tag @illegal_report.image ,class:"report-box-img" %>
+      <% else %>
+        <div class='report-message'>写真はありません</div>
+      <% end %>
+    </div>
+    <div class='report-text'>
+      <div class='report-info'>収集地域:<%= @illegal_report.location.name %></div>
+      <div class='report-info'>地点:<%= @illegal_report.point %></div>
+      <div class='report-info'>内容物:<%= @illegal_report.content %></div>
+      <% if @illegal_report.comment.present? %>
+        <div class='report-info-attention'>補足事項:<%= @illegal_report.comment %></div>
+      <% end %>
+      <div class='report-info'>報告者:<%= @illegal_report.user.name %></div>
+    </div>
+  </div>
+
+</div>
