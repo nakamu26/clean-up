@@ -35,16 +35,13 @@
     <div class='reports-area'>
       <div class='title'>不法物</div>
       <ul>
+        <% if @illegal_reports.length != 0 %>
+          <%= render partial: "illegal_report", collection: @illegal_reports %>
+        <% else %>
         <li class='list'>
-          <%= link_to "#" do %>
-            <div class='report-info'>猫実</div>
-            <div class='report-info'>自転車屋の通り</div>
-            <div class='report-info'>ソファ</div>
-            <div class='report-info'>田中</div>
-            <div class='report-info-attention'>写真あり</div>
-            <div class='report-info-attention'>コメントあり</div>
-          <% end %>
+            <div class='report-info'>不法物はまだありません</div>
         </li>
+        <% end %>
       </ul>
     </div>
   </div>
