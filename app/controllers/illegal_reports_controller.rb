@@ -1,6 +1,6 @@
 class IllegalReportsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :set_illegal_report, only: [:show]
+  before_action :set_illegal_report, only: [:show, :edit, :update]
 
   def new
     @illegal_report = IllegalReport.new
@@ -16,6 +16,19 @@ class IllegalReportsController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+    render :new
+  end
+
+  def update
+    params[:illegal_report][:image] = @illegal_report.image unless params[:illegal_report][:image]
+    if @illegal_report.update(illegal_report_params)
+      redirect_to illegal_report_path(@illegal_report.id)
+    else
+      render :new
+    end
   end
 
   private
