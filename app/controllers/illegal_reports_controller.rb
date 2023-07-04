@@ -1,0 +1,2 @@
+class IllegalReportsController < ApplicationController
+end
