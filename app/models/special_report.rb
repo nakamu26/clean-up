@@ -9,5 +9,5 @@ class SpecialReport < ApplicationRecord
   with_options numericality: { other_than: 0, message: "can't be blank" } do
     validates :location_id
     validates :category_id
-  end 
+  end
 end

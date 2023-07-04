@@ -1,8 +1,8 @@
 <%= render "shared/header" %>
 
 <div class='form-main'>
-  <h2 class='form-title'>特記事項フォーム</h2>
-  <%= form_with model: @special_report, local: true do |f| %>
+  <h2 class='form-title'>不法物フォーム</h2>
+  <%= form_with model: @illegal_report, local: true do |f| %>
 
   <%= render 'shared/error_messages', model: f.object %>
 
@@ -12,13 +12,13 @@
   </div>
 
   <div class="field">
-    <div class='form-text'>種別</div>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
+    <div class='form-text'>地点</div>
+    <%= f.text_field :point, class:"input-default" %>
   </div>
 
   <div class="field">
-    <div class='form-text'>地点</div>
-    <%= f.text_field :point, class:"input-default" %>
+    <div class='form-text'>内容物</div>
+    <%= f.text_field :content, class:"input-default" %>
   </div>
 
   <div class="field">
@@ -44,7 +44,7 @@
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     <% else %>
       <%= f.submit "変更する" ,class:"post-btn" %>
-      <%=link_to 'もどる', special_report_path(@special_report.id), class:"back-btn" %>
+      <%=link_to 'もどる', '#', class:"back-btn" %>
     <% end %>
   </div>
 

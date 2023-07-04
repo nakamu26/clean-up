@@ -5,6 +5,5 @@ class Category < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :normal_reports
   has_many :special_reports
 end
