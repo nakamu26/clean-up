@@ -1,0 +1,2 @@
+class IllegalReport < ApplicationRecord
+end
