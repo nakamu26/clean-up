@@ -1,5 +1,5 @@
 <li class='list'>
-  <%= link_to '#' do %>
+  <%= link_to illegal_report_path(illegal_report.id) do %>
     <div class='report-info'>地域:<%= illegal_report.location.name %></div>
     <div class='report-info'>地点:<%= illegal_report.point %></div>
     <div class='report-info'>内容物:<%= illegal_report.content %></div>
