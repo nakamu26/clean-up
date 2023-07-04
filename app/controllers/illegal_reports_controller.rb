@@ -1,6 +1,7 @@
 class IllegalReportsController < ApplicationController
   before_action :authenticate_user!, except: [:show]
-  before_action :set_illegal_report, only: [:show]
+  before_action :set_illegal_report, only: [:show, :edit, :update]
+  before_action :move_to_index, except: [:show, :new, :create]
 
   def new
     @illegal_report = IllegalReport.new
@@ -18,6 +19,19 @@ class IllegalReportsController < ApplicationController
   def show
   end
 
+  def edit
+    render :new
+  end
+
+  def update
+    params[:illegal_report][:image] = @illegal_report.image unless params[:illegal_report][:image]
+    if @illegal_report.update(illegal_report_params)
+      redirect_to illegal_report_path(@illegal_report.id)
+    else
+      render :new
+    end
+  end
+
   private
 
   def illegal_report_params
@@ -26,5 +40,9 @@ class IllegalReportsController < ApplicationController
 
   def set_illegal_report
     @illegal_report = IllegalReport.find(params[:id])
+  end
+
+  def move_to_index
+    redirect_to root_path unless current_user.id == @illegal_report.user_id
   end
 end

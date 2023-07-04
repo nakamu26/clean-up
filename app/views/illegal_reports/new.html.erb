@@ -44,7 +44,7 @@
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     <% else %>
       <%= f.submit "変更する" ,class:"post-btn" %>
-      <%=link_to 'もどる', '#', class:"back-btn" %>
+      <%=link_to 'もどる', illegal_report_path(@illegal_report.id), class:"back-btn" %>
     <% end %>
   </div>
 
