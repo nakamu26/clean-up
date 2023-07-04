@@ -1,4 +1,6 @@
 class IllegalReportsController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+
   def new
     @illegal_report = IllegalReport.new
   end
