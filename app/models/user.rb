@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :normal_reports
   has_many :special_reports
   has_many :illegal_reports
+  has_many :check_normal_reports
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates :name, presence: true

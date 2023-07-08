@@ -1,5 +1,6 @@
 class NormalReport < ApplicationRecord
   belongs_to :user
+  has_many :check_normal_reports
   has_one_attached :image
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :location
