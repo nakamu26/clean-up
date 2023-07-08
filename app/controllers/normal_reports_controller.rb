@@ -23,6 +23,7 @@ class NormalReportsController < ApplicationController
   end
 
   def show
+    @check_normal_report = CheckNormalReport.new
   end
 
   def edit
