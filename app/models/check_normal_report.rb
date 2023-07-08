@@ -1,0 +1,2 @@
+class CheckNormalReport < ApplicationRecord
+end
