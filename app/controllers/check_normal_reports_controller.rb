@@ -1,0 +1,2 @@
+class CheckNormalReportsController < ApplicationController
+end
