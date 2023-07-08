@@ -54,3 +54,39 @@
 ### Association
 
 - belongs_to :user
+
+## check_normal_reports テーブル
+
+| Column        | Type       | Option                         |
+| ------------- | ---------- | ------------------------------ |
+| user          | references | null: false, foreign_key: true |
+| normal_report | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :normal_report
+
+## check_special_reports テーブル
+
+| Column         | Type       | Option                         |
+| -------------- | ---------- | ------------------------------ |
+| user           | references | null: false, foreign_key: true |
+| special_report | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :special_report
+
+## check_illegal_reports テーブル
+
+| Column         | Type       | Option                         |
+| -------------- | ---------- | ------------------------------ |
+| user           | references | null: false, foreign_key: true |
+| illegal_report | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :illegal_report
