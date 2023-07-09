@@ -22,12 +22,15 @@
     </div>
   </div>
   <div class='check-btn'>
-    <%= form_with model: [@normal_report, @check_normal_report], local: true do |f|%>
-      <input name="normal_report[user_id]" type="hidden" value=<%= current_user.id %>>
-      <%= f.submit "チェックする" ,class:"post-btn" %>
+    <% if @check_normal_report.id.nil? %>
+      <%= form_with model: [@normal_report, @check_normal_report], local: true do |f|%>
+        <input name="normal_report[user_id]" type="hidden" value=<%= current_user.id %>>
+        <%= f.submit "チェックする" ,class:"post-btn" %>
+      <% end %>
+    <% else %>
+      <div class='check-complete'>
+        チェック済み
+      </div>
     <% end %>
-  </div>
-  <div class='check-btn'>
-    チェック済み
   </div>
 </div>

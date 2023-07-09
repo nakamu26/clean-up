@@ -23,7 +23,10 @@ class NormalReportsController < ApplicationController
   end
 
   def show
-    @check_normal_report = CheckNormalReport.new
+    @check_normal_report = CheckNormalReport.where(user_id: current_user.id, normal_report_id: params[:id]).take
+    if @check_normal_report.blank?
+      @check_normal_report = CheckNormalReport.new
+    end
   end
 
   def edit
