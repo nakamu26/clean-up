@@ -21,5 +21,13 @@
       <div class='report-info'>報告者:<%= @normal_report.user.name %></div>
     </div>
   </div>
-
+  <div class='check-btn'>
+    <%= form_with model: [@normal_report, @check_normal_report], local: true do |f|%>
+      <input name="normal_report[user_id]" type="hidden" value=<%= current_user.id %>>
+      <%= f.submit "チェックする" ,class:"post-btn" %>
+    <% end %>
+  </div>
+  <div class='check-btn'>
+    チェック済み
+  </div>
 </div>
