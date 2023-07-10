@@ -31,6 +31,7 @@ class NormalReportsController < ApplicationController
     if @check_normal_report.blank?
       @check_normal_report = CheckNormalReport.new
     end
+    gon.normal_report_id = params[:id]
   end
 
   def edit
