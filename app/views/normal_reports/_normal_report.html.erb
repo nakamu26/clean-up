@@ -1,5 +1,5 @@
 <li class='
-  <% if @check_normal_reports.exists?(normal_report_id: normal_report.id) %>
+  <% if user_signed_in? && @check_normal_reports.exists?(normal_report_id: normal_report.id) %>
     list-check-comp
   <% else %>
     list
@@ -16,14 +16,16 @@
     <% end %>
   <% end %>
   </div>
-  <div class='check-field'>
-  <% if @check_normal_reports.exists?(normal_report_id: normal_report.id) %>
-    <div class='check-box-comp'>
-      チェック済み
-  <% else %>
-    <div class='checck-box-incomp'>
-      未チェック
-  <% end %>
+  <% if user_signed_in? %>
+    <div class='check-field'>
+    <% if @check_normal_reports.exists?(normal_report_id: normal_report.id) %>
+      <div class='check-box-comp'>
+        チェック済み
+    <% else %>
+      <div class='checck-box-incomp'>
+        未チェック
+    <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </li>

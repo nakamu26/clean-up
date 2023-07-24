@@ -10,7 +10,9 @@ class NormalReportsController < ApplicationController
                                     .includes(:user).order("created_at DESC")
     @illegal_reports = IllegalReport.where("created_at >= ?", Date.today)
                                     .includes(:user).order("created_at DESC")
-    @check_normal_reports = CheckNormalReport.where(user_id: current_user.id)
+    if user_signed_in?
+      @check_normal_reports = CheckNormalReport.where(user_id: current_user.id)
+    end
   end
 
   def new
@@ -27,11 +29,13 @@ class NormalReportsController < ApplicationController
   end
 
   def show
-    @check_normal_report = CheckNormalReport.where(user_id: current_user.id, normal_report_id: params[:id]).take
-    if @check_normal_report.blank?
-      @check_normal_report = CheckNormalReport.new
+    if user_signed_in?
+      @check_normal_report = CheckNormalReport.where(user_id: current_user.id, normal_report_id: params[:id]).take
+      if @check_normal_report.blank?
+        @check_normal_report = CheckNormalReport.new
+      end
+      gon.normal_report_id = params[:id]
     end
-    gon.normal_report_id = params[:id]
   end
 
   def edit
