@@ -4,9 +4,15 @@ class NormalReportsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :new, :create]
 
   def index
-    @normal_reports = NormalReport.where("created_at >= ?", Date.today).includes(:user).order("created_at DESC")
-    @special_reports = SpecialReport.where("created_at >= ?", Date.today).includes(:user).order("created_at DESC")
-    @illegal_reports = IllegalReport.where("created_at >= ?", Date.today).includes(:user).order("created_at DESC")
+    @normal_reports = NormalReport.where("created_at >= ?", Date.today)
+                                  .includes(:user).order("created_at DESC")
+    @special_reports = SpecialReport.where("created_at >= ?", Date.today)
+                                    .includes(:user).order("created_at DESC")
+    @illegal_reports = IllegalReport.where("created_at >= ?", Date.today)
+                                    .includes(:user).order("created_at DESC")
+    if user_signed_in?
+      @check_normal_reports = CheckNormalReport.where(user_id: current_user.id)
+    end
   end
 
   def new
@@ -23,6 +29,13 @@ class NormalReportsController < ApplicationController
   end
 
   def show
+    if user_signed_in?
+      @check_normal_report = CheckNormalReport.where(user_id: current_user.id, normal_report_id: params[:id]).take
+      if @check_normal_report.blank?
+        @check_normal_report = CheckNormalReport.new
+      end
+      gon.normal_report_id = params[:id]
+    end
   end
 
   def edit

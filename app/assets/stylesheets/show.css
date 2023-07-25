@@ -30,3 +30,21 @@
   margin-right: auto;
   margin-top: 5px;
 }
+
+.check-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.check-complete {
+  height: 28px;
+  width: 110px;
+  padding: 5px;
+  border: solid 1px;
+  line-height: 15px;
+  text-align: center;
+  color: black;
+  background-color: #96f0e8;
+}

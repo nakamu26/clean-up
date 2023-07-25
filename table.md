@@ -13,6 +13,9 @@
 - has_many :normal_reports
 - has_many :special_reports
 - has_many :illegal_reports
+- has_many :check_normal_reports
+- has_many :check_special_reports
+- has_many :check_illegal_reports
 
 ## normal_reports テーブル
 
@@ -26,6 +29,7 @@
 ### Association
 
 - belongs_to :user
+- has_many :check_normal_reports
 
 ## special_reports テーブル
 
@@ -40,6 +44,7 @@
 ### Association
 
 - belongs_to :user
+- has_many :check_special_reports
 
 ## illegal_reports テーブル
 
@@ -54,6 +59,7 @@
 ### Association
 
 - belongs_to :user
+- has_many :check_illegal_reports
 
 ## check_normal_reports テーブル
 

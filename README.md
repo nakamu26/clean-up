@@ -33,7 +33,7 @@ https://clean-up.onrender.com/
 - 投稿内容を変更すると、変更が適用され詳細画面に遷移する(GIF)
 [![Image from Gyazo](https://i.gyazo.com/b0d63cb7d84ab695adcc0f2064af1401.gif)](https://gyazo.com/b0d63cb7d84ab695adcc0f2064af1401)
 # 実装予定の機能
-今後、検索機能を実装予定。
+今後、チェック機能を実装予定。
 # データベース設計
 ![Alt text](ER-1.png)
 # 画面遷移図
