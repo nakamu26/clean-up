@@ -32,10 +32,14 @@ https://clean-up.onrender.com/
 [![Image from Gyazo](https://i.gyazo.com/3fb62f5da95b7f857d8ccc17e9669333.gif)](https://gyazo.com/3fb62f5da95b7f857d8ccc17e9669333)
 - 投稿内容を変更すると、変更が適用され詳細画面に遷移する(GIF)
 [![Image from Gyazo](https://i.gyazo.com/b0d63cb7d84ab695adcc0f2064af1401.gif)](https://gyazo.com/b0d63cb7d84ab695adcc0f2064af1401)
+- 投稿詳細画面で「チェックする」を押下するとチェックされたことが記録され、「チェック済み」の表示に切り替わる
+[![Image from Gyazo](https://i.gyazo.com/65efb709fc37fccfe9425971d062e6c6.gif)](https://gyazo.com/65efb709fc37fccfe9425971d062e6c6)
+- チェック済みの投稿は、バックグラウンドが変化し、右側の「未チェック」の表示が「チェック済み」になる
+[![Image from Gyazo](https://i.gyazo.com/e82e6390d2bab1dba409478edde94b21.png)](https://gyazo.com/e82e6390d2bab1dba409478edde94b21)
 # 実装予定の機能
 今後、チェック機能を実装予定。
 # データベース設計
-![Alt text](ER-1.png)
+![Alt text](ER2.png)
 # 画面遷移図
 ![Alt text](Transition_diagram-1.png)
 # 開発環境
@@ -53,3 +57,4 @@ Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code
 - 投稿内容は基本的に当日分が見られれば良いので、一覧ページに表示する投稿はwhereメソッドにより当日分のみ取得するようにした。
 - 一覧に表示される情報のみでも十全に情報伝達できる場合が多いが、補足するために写真や補足事項を付加されていることを
 閲覧者が見落とさないように、写真や補足事項がある場合は赤字で強調するようにした。
+- 投稿が、すでに確認したものか示す機能が必要であると考え、チェック機能を追加実装した。
